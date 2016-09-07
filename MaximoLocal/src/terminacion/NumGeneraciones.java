@@ -13,7 +13,7 @@ import gaframework.*;
  */
 public class NumGeneraciones implements TerminationCondition<Boolean, Integer> {
 
-    private int numGen;
+    private final int numGen;
 
     public NumGeneraciones(int numGen) {
         this.numGen = numGen;
