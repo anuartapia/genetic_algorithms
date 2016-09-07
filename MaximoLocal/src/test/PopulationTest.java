@@ -1,3 +1,5 @@
+package test;
+
 import gaframework.*;
 
 public class PopulationTest {

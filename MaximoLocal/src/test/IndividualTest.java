@@ -1,4 +1,6 @@
-package gaframework;
+package test;
+
+import gaframework.*;
 
 public class IndividualTest {
 

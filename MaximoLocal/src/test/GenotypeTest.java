@@ -1,3 +1,4 @@
+package test;
 import gaframework.*;
 
 public class GenotypeTest {

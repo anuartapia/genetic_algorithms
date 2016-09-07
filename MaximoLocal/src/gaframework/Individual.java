@@ -15,7 +15,7 @@ public final class Individual<G,P> implements Comparable<Individual<G,P>>{
      * @param phenotype El fenotipo del individuo.
      * @param fitness El grado de adaptación del individuo.
      */
-    Individual(Genotype<G> genotype, Phenotype<P> phenotype, double fitness){
+    public Individual(Genotype<G> genotype, Phenotype<P> phenotype, double fitness){
 	this.genotype = genotype;
 	this.phenotype = phenotype;
 	this.fitness = fitness;
