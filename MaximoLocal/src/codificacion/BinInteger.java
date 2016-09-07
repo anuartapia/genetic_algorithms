@@ -24,7 +24,7 @@ public class BinInteger implements Codification<Boolean, Integer>{
         this.numBits = numBits;
         this.numNums = numNums;
     }
-    private Integer potencia(Integer a, Integer b){
+    private Integer pow(Integer a, Integer b){
         Integer result = a.intValue();
         for(int i = 1; i < b; i++){
             result *= a;
@@ -41,7 +41,7 @@ public class BinInteger implements Codification<Boolean, Integer>{
     private Integer binaryToInteger(Boolean[] bits){
         Integer number = 0;
         for (int i = 0; i < numBits; i++) {
-            number += bits[numBits - 1 - i] ? potencia(2,i) : 0;
+            number += bits[numBits - 1 - i] ? pow(2,i) : 0;
         }
         return number;
     }
