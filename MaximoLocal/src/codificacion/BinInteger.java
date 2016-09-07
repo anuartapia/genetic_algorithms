@@ -7,6 +7,7 @@ package codificacion;
 
 import gaframework.*;
 import java.util.Arrays;
+import java.util.Random;
 
 /**
  *
@@ -19,10 +20,12 @@ public class BinInteger implements Codification<Boolean, Integer>{
     de 11 bits */
     private final int numBits;
     private final int numNums;
+    private final Random r;
 
-    public BinInteger(int numBits, int numNums) {
+    public BinInteger(int numBits, int numNums, int seed) {
         this.numBits = numBits;
         this.numNums = numNums;
+        this.r = new Random(seed);
     }
     private Integer pow(Integer a, Integer b){
         Integer result = a.intValue();
@@ -74,7 +77,10 @@ public class BinInteger implements Codification<Boolean, Integer>{
 
     @Override
     public Genotype<Boolean> newRandomGenotype() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Genotype<Boolean> genotype = new Genotype<>(numBits);
+        for (int i = 0; i < numBits; i++) {
+            genotype.setGene(i, r.nextBoolean());
+        }
+        return genotype;
     }
-    
 }
