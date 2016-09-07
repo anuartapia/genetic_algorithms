@@ -26,7 +26,7 @@ public class BinInteger implements Codification<Boolean, Integer>{
     }
     private Integer potencia(Integer a, Integer b){
         Integer result = a.intValue();
-        for(int i = 0; i < b; i++){
+        for(int i = 1; i < b; i++){
             result *= a;
         }
         return result;
