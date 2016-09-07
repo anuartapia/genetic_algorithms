@@ -4,9 +4,12 @@ import java.util.LinkedList;
 
 /**
  * Una instancia de Breeder permite crear nuevas instancias de individuos
- * válidos a partir de su fenotipo o genotipo. También permite crear
- * individuos y poblaciones aleatorias. Cada individuo generado contará
- * con un genotipo, fenotipo correspondiente y un grado de adaptación.
+ * válidos a partir de su fenotipo o genotipo, también permite crear
+ * individuos y poblaciones aleatorias. 
+ * @see Individual
+ * @see Population
+ * @see Genotype
+ * @see Phenotype
  */
 public class Breeder<G,P> {
 
