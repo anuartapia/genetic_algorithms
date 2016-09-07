@@ -69,7 +69,7 @@ public class BinInteger implements Codification<Boolean, Integer>{
             for(int j = 0; j < numBits ;j++){
                 bits[j] = genotype.getGene(i);
             }
-            Integer number = binaryToInteger(Arrays.copyOfRange(bits, i, i));
+            Integer number = binaryToInteger(Arrays.copyOfRange(bits, i*numBits, i*numBits+numBits));
             phenotype.setAllele(i, number);
         }
         return phenotype;
